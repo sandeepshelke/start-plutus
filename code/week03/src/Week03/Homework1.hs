@@ -53,14 +53,14 @@ mkValidator dat () ctx = traceIfFalse "beneficiary's signature missing" (sigBen1
     info :: TxInfo
     info = scriptContextTxInfo ctx
 
-    signatures :: [PubKeyHash]
-    signatures = txInfoSignatories info
+    signs :: [PubKeyHash]
+    signs = txInfoSignatories info
 
     sigBen1 :: Bool
-    sigBen1 = beneficiary1 dat `elem` signatures
+    sigBen1 = beneficiary1 dat `elem` signs
 
     sigBen2 :: Bool
-    sigBen2 = beneficiary2 dat `elem` signatures
+    sigBen2 = beneficiary2 dat `elem` signs
 
     deadlineReached :: Bool
     deadlineReached = contains (from $ deadline dat) $ txInfoValidRange info

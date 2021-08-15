@@ -38,12 +38,12 @@ import           Prelude              (Semigroup (..), Show (..), String)
 import qualified Prelude
 
 data Game = Game
-    { gFirst          :: !PubKeyHash
-    , gSecond         :: !PubKeyHash
+    { gFirst          :: !PubKeyHash -- player 1
+    , gSecond         :: !PubKeyHash -- player 2
     , gStake          :: !Integer
-    , gPlayDeadline   :: !POSIXTime
-    , gRevealDeadline :: !POSIXTime
-    , gToken          :: !AssetClass
+    , gPlayDeadline   :: !POSIXTime  -- by what time second player need to play
+    , gRevealDeadline :: !POSIXTime  -- by when first player should reveal
+    , gToken          :: !AssetClass -- arbitrary NFT to identify right instance of utxo
     } deriving (Show, Generic, FromJSON, ToJSON, Prelude.Eq, Prelude.Ord)
 
 PlutusTx.makeLift ''Game

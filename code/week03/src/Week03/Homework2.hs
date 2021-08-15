@@ -43,7 +43,7 @@ mkValidator pkh dl () ctx = traceIfFalse "beneficiary's signature missing" signe
     info = scriptContextTxInfo ctx
 
     signedByBeneficiary :: Bool
-    signedByBeneficiary = txSignedBy info $ pkh
+    signedByBeneficiary = txSignedBy info pkh
 
     deadlineReached :: Bool
     deadlineReached = contains (from dl) $ txInfoValidRange info

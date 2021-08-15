@@ -30,7 +30,7 @@ import           Control.Monad             hiding (fmap)
 import           Data.Aeson                (FromJSON, ToJSON)
 import qualified Data.Map                  as Map
 import           Data.Monoid               (Last (..))
-import           Data.Text                 (Text, pack)
+import           Data.Text                 as DataText
 import           GHC.Generics              (Generic)
 import           Plutus.Contract           as Contract
 import qualified PlutusTx
@@ -141,10 +141,10 @@ data OracleParams = OracleParams
     , opToken  :: !TokenName
     } deriving (Show, Generic, FromJSON, ToJSON)
 
-startOracle :: forall w s. OracleParams -> Contract w s Text Oracle
+startOracle :: forall w s. OracleParams -> Contract w s DataText.Text Oracle
 startOracle op = do
     pkh <- pubKeyHash <$> Contract.ownPubKey
-    osc <- mapError (pack . show) (mintContract pkh [(oracleTokenName, 1)] :: Contract w s CurrencyError OneShotCurrency)
+    osc <- mapError (DataText.pack . show) (mintContract pkh [(oracleTokenName, 1)] :: Contract w s CurrencyError OneShotCurrency)
     let cs     = Currency.currencySymbol osc
         oracle = Oracle
             { oSymbol   = cs
@@ -155,7 +155,7 @@ startOracle op = do
     logInfo @String $ "started oracle " ++ show oracle
     return oracle
 
-updateOracle :: forall w s. Oracle -> Integer -> Contract w s Text ()
+updateOracle :: forall w s. Oracle -> Integer -> Contract w s DataText.Text ()
 updateOracle oracle x = do
     m <- findOracle oracle
     let c = Constraints.mustPayToTheScript x $ assetClassValue (oracleAsset oracle) 1
@@ -173,7 +173,7 @@ updateOracle oracle x = do
             awaitTxConfirmed $ txId ledgerTx
             logInfo @String $ "updated oracle value to " ++ show x
 
-findOracle :: forall w s. Oracle -> Contract w s Text (Maybe (TxOutRef, TxOutTx, Integer))
+findOracle :: forall w s. Oracle -> Contract w s DataText.Text (Maybe (TxOutRef, TxOutTx, Integer))
 findOracle oracle = do
     utxos <- Map.filter f <$> utxoAt (oracleAddress oracle)
     return $ case Map.toList utxos of
@@ -187,13 +187,13 @@ findOracle oracle = do
 
 type OracleSchema = Endpoint "update" Integer
 
-runOracle :: OracleParams -> Contract (Last Oracle) OracleSchema Text ()
+runOracle :: OracleParams -> Contract (Last Oracle) OracleSchema DataText.Text ()
 runOracle op = do
     oracle <- startOracle op
     tell $ Last $ Just oracle
     go oracle
   where
-    go :: Oracle -> Contract (Last Oracle) OracleSchema Text a
+    go :: Oracle -> Contract (Last Oracle) OracleSchema DataText.Text a
     go oracle = do
         x <- endpoint @"update"
         updateOracle oracle x

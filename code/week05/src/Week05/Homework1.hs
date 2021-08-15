@@ -13,7 +13,6 @@
 module Week05.Homework1 where
 
 import           Control.Monad              hiding (fmap)
-import           Control.Monad.Freer.Extras as Extras
 import           Data.Aeson                 (ToJSON, FromJSON)
 import           Data.Default               (Default (..))
 import           Data.Text                  (Text)
@@ -28,10 +27,10 @@ import           Ledger.Constraints         as Constraints
 import           Ledger.TimeSlot
 import qualified Ledger.Typed.Scripts       as Scripts
 import           Ledger.Value               as Value
-import           Playground.Contract        (printJson, printSchemas, ensureKnownCurrencies, stage, ToSchema)
+import           Playground.Contract        (ToSchema)
 import           Playground.TH              (mkKnownCurrencies, mkSchemaDefinitions)
 import           Playground.Types           (KnownCurrency (..))
-import           Prelude                    (IO, Semigroup (..), Show (..), String, undefined)
+import           Prelude                    (IO, Semigroup (..), Show (..), String)
 import           Text.Printf                (printf)
 import           Wallet.Emulator.Wallet
 
@@ -39,13 +38,28 @@ import           Wallet.Emulator.Wallet
 -- This policy should only allow minting (or burning) of tokens if the owner of the specified PubKeyHash
 -- has signed the transaction and if the specified deadline has not passed.
 mkPolicy :: PubKeyHash -> POSIXTime -> () -> ScriptContext -> Bool
-mkPolicy pkh deadline () ctx = True -- FIX ME!
+mkPolicy pkh deadline () ctx = traceIfFalse "Tx not signed"    checkSigned   &&
+                               traceIfFalse "Deadline reached" (not reachedDeadline)
+  where
+    info :: TxInfo
+    info = scriptContextTxInfo ctx
+
+    checkSigned :: Bool
+    checkSigned = pkh `elem` txInfoSignatories info
+
+    reachedDeadline :: Bool
+    reachedDeadline = from deadline `contains` txInfoValidRange info
 
 policy :: PubKeyHash -> POSIXTime -> Scripts.MintingPolicy
-policy pkh deadline = undefined -- IMPLEMENT ME!
+policy pkh deadline = mkMintingPolicyScript $
+    ($$(PlutusTx.compile [|| \pkh' deadline' -> Scripts.wrapMintingPolicy $ mkPolicy pkh' deadline' ||])
+    `PlutusTx.applyCode`
+    PlutusTx.liftCode pkh
+    `PlutusTx.applyCode`
+    PlutusTx.liftCode deadline)
 
 curSymbol :: PubKeyHash -> POSIXTime -> CurrencySymbol
-curSymbol pkh deadline = undefined -- IMPLEMENT ME!
+curSymbol pkh deadline = scriptCurrencySymbol $ policy pkh deadline
 
 data MintParams = MintParams
     { mpTokenName :: !TokenName
