@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  alonzo-nix:
+    image: ubuntu:focal-20200423
+    volumes:
+      - ../:/code
