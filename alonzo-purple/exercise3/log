@@ -1,0 +1,10 @@
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+3b3b245e888d279fc5b18628f5d0809596261c716a027b11bedcda005ceb5966     1        10000000000 lovelace + TxOutDatumHash ScriptDataInAlonzoEra "405a57b25edfec1c98b0d1c4364ab1cbf57ae92ecbbdce0ed609a90035d89e3f"
+4377ec2772cc3294b3e72576db7319fb16721c35b63a8297d60d24bf0b98cae1     1        10000000000 lovelace + TxOutDatumHash ScriptDataInAlonzoEra "49546e2e8cd8c790bc0ae0a3209f48cb01633e74fcc57c391ad304e791c46822"
+614f3ee7f0981265ff334975a166feb6339e3c9d7129afee4c09fd9811d35bc9     1        1000000000 lovelace + TxOutDatumHash ScriptDataInAlonzoEra "f0edaedb6c69a8f2957cfef9a526e80e7869823c017eff315c9ea3ca547a4c28"
+64da80313652cc9493976af02e41095992afe5c7772c9a5fa50d08535060f8c0     1        200000000 lovelace + TxOutDatumHashNone
+9bc13fab0f0693e8ab9b9d33ff81efc02547c4abdf5f4a46c383cfe3c77c9020     1        5000000 lovelace + TxOutDatumHash ScriptDataInAlonzoEra "fadd2180bd6b1cfa73a67e7892d878521ef69918995040fb8661647d321e0c55"
+9fa403489698243e08661062c347692a6678a076186c65bf569d16f70299a9eb     0        1000000 lovelace + TxOutDatumHashNone
+b11aa3f1f96a19cc3c0f8ef1121a7f71bea194c2780ea77fb78bab452d3ee768     1        400000000 lovelace + TxOutDatumHash ScriptDataInAlonzoEra "a3776701d6f05890fad157aad4b94e60e1e25f46c16707c3c30b3ba6bf18bb5e"
+ef8c64233c2c2d3620b4a9def2538673f3b597aab09621d5bf52f769979b1217     1        100000000 lovelace + TxOutDatumHashNone

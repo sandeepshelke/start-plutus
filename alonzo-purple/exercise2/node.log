@@ -1,0 +1,162 @@
+Starting: /nix/store/4s7q2xngxq44h6dxgyinrb6f0cac9ajz-cardano-node-exe-cardano-node-1.28.0/bin/cardano-node run
+--config /nix/store/nwhbllpv4mvaxdwf6n25bmxnpv0ag0hz-config-0-0.json
+--database-path state-node-alonzo-purple/db-alonzo-purple
+--topology /nix/store/6r19xjl4i4iaa4nipl9vqqvacqr8fqya-topology.yaml
+--host-addr 0.0.0.0
+--port 3001
+--socket-path state-node-alonzo-purple/node.socket
+
+
+
+
+
++RTS
+-N2
+-A16m
+-qg
+-qb
+--disable-delayed-os-memory-return
+-RTS
+..or, once again, in a single line:
+/nix/store/4s7q2xngxq44h6dxgyinrb6f0cac9ajz-cardano-node-exe-cardano-node-1.28.0/bin/cardano-node run --config /nix/store/nwhbllpv4mvaxdwf6n25bmxnpv0ag0hz-config-0-0.json --database-path state-node-alonzo-purple/db-alonzo-purple --topology /nix/store/6r19xjl4i4iaa4nipl9vqqvacqr8fqya-topology.yaml --host-addr 0.0.0.0 --port 3001 --socket-path state-node-alonzo-purple/node.socket      +RTS -N2 -A16m -qg -qb --disable-delayed-os-memory-return -RTS
+[d8bb8a31:cardano.node:Debug:5] [2021-08-28 10:06:44.06 UTC] tracing verbosity = normal verbosity 
+[35m[d8bb8a31:cardano.node.networkMagic:Notice:5][0m [2021-08-28 10:06:44.06 UTC] NetworkMagic 8
+[35m[d8bb8a31:cardano.node.basicInfo.protocol:Notice:5][0m [2021-08-28 10:06:44.06 UTC] Byron; Shelley
+[35m[d8bb8a31:cardano.node.basicInfo.version:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 1.28.0
+[35m[d8bb8a31:cardano.node.basicInfo.commit:Notice:5][0m [2021-08-28 10:06:44.06 UTC] c17315f2775eaf988e432b7caea3a094d62ce6c9
+[35m[d8bb8a31:cardano.node.basicInfo.nodeStartTime:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 2021-08-28 10:06:44.064981006 UTC
+[35m[d8bb8a31:cardano.node.basicInfo.systemStartTime:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 2021-08-20 16:00:00 UTC
+[35m[d8bb8a31:cardano.node.basicInfo.slotLengthByron:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 20s
+[35m[d8bb8a31:cardano.node.basicInfo.epochLengthByron:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 360
+[35m[d8bb8a31:cardano.node.basicInfo.slotLengthShelley:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 1s
+[35m[d8bb8a31:cardano.node.basicInfo.epochLengthShelley:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 7200
+[35m[d8bb8a31:cardano.node.basicInfo.slotsPerKESPeriodShelley:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 129600
+[35m[d8bb8a31:cardano.node.basicInfo.slotLengthAllegra:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 1s
+[35m[d8bb8a31:cardano.node.basicInfo.epochLengthAllegra:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 7200
+[35m[d8bb8a31:cardano.node.basicInfo.slotsPerKESPeriodAllegra:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 129600
+[35m[d8bb8a31:cardano.node.basicInfo.slotLengthMary:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 1s
+[35m[d8bb8a31:cardano.node.basicInfo.epochLengthMary:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 7200
+[35m[d8bb8a31:cardano.node.basicInfo.slotsPerKESPeriodMary:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 129600
+[35m[d8bb8a31:cardano.node.basicInfo.slotLengthAlonzo:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 1s
+[35m[d8bb8a31:cardano.node.basicInfo.epochLengthAlonzo:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 7200
+[35m[d8bb8a31:cardano.node.basicInfo.slotsPerKESPeriodAlonzo:Notice:5][0m [2021-08-28 10:06:44.06 UTC] 129600
+[35m[d8bb8a31:cardano.node.addresses:Notice:5][0m [2021-08-28 10:06:44.06 UTC] [SocketInfo 0.0.0.0:3001]
+[35m[d8bb8a31:cardano.node.diffusion-mode:Notice:5][0m [2021-08-28 10:06:44.06 UTC] InitiatorAndResponderDiffusionMode
+[35m[d8bb8a31:cardano.node.dns-producers:Notice:5][0m [2021-08-28 10:06:44.06 UTC] [DnsSubscriptionTarget {dstDomain = "relays.alonzo-purple.dev.cardano.org", dstPort = 3001, dstValency = 1}]
+[35m[d8bb8a31:cardano.node.ip-producers:Notice:5][0m [2021-08-28 10:06:44.06 UTC] IPSubscriptionTarget {ispIps = [], ispValency = 0}
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.11 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.13 UTC] TraceImmutableDBEvent
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.13 UTC] Opened imm db with immutable tip at 574851af0de882f16e79b5f2dd04dead039d1d05cfe0df37881463a1273a1e7d at slot 662119 and chunk 1839
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.15 UTC] Opened vol db
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.16 UTC] Replaying ledger from snapshot DiskSnapshot {dsNumber = 662109, dsSuffix = Nothing} at c141b6012132ee7d6394fef782c24089582c7f4325ff538309bc119463440b3c at slot 662109
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.16 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.16 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.16 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.16 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.16 UTC] TraceImmutableDBEvent
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.16 UTC] Replayed block: slot SlotNo 662114 of At (SlotNo 662119)
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.16 UTC] before next, messages elided = 662118
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.16 UTC] Replayed block: slot SlotNo 662119 of At (SlotNo 662119)
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.16 UTC] Opened lgr db
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:06:44.19 UTC] InitChainSelValidation
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:06:44.19 UTC] Opened db with immutable tip at 574851af0de882f16e79b5f2dd04dead039d1d05cfe0df37881463a1273a1e7d at slot 662119 and tip e98857c819c1e7af262b3d1cf2d9aca3428c893b8a2c2b695978a9e8ee91eea3 at slot 662935
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.19 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Starting Subscription Worker, valency 1
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:55][0m [2021-08-28 10:06:44.19 UTC] CreatingServerSocket 0.0.0.0:3001
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:55][0m [2021-08-28 10:06:44.19 UTC] ConfiguringServerSocket 0.0.0.0:3001
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:55][0m [2021-08-28 10:06:44.19 UTC] ListeningServerSocket 0.0.0.0:3001
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:55][0m [2021-08-28 10:06:44.19 UTC] ServerSocketUp 0.0.0.0:3001
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:55][0m [2021-08-28 10:06:44.19 UTC] RunServer 0.0.0.0:3001
+[d8bb8a31:cardano.node.IpSubscription:Debug:51] [2021-08-28 10:06:44.19 UTC] IPs: 0.0.0.0:0 [] Starting Subscription Worker, valency 0
+[d8bb8a31:cardano.node.IpSubscription:Debug:51] [2021-08-28 10:06:44.19 UTC] IPs: 0.0.0.0:0 [] Required subscriptions started
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] CreateSystemdSocketForSnocketPath "state-node-alonzo-purple/node.socket"
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] CreatedLocalSocket "state-node-alonzo-purple/node.socket"
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] ConfiguringLocalSocket "state-node-alonzo-purple/node.socket" (FileDescriptor 27)
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] ListeningLocalSocket "state-node-alonzo-purple/node.socket" (FileDescriptor 27)
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] LocalSocketUp "state-node-alonzo-purple/node.socket" (FileDescriptor 27)
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:58][0m [2021-08-28 10:06:44.19 UTC] RunLocalServer (LocalAddress "state-node-alonzo-purple/node.socket")
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:67][0m [2021-08-28 10:06:44.27 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Start, destination 3.142.127.63:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:67] [2021-08-28 10:06:44.27 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Allocate socket to 3.142.127.63:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.27 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Waiting 0.025s before attempting a new connection
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:68][0m [2021-08-28 10:06:44.30 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Start, destination 18.142.32.1:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:68] [2021-08-28 10:06:44.30 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Allocate socket to 18.142.32.1:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.30 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Waiting 0.025s before attempting a new connection
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:69][0m [2021-08-28 10:06:44.32 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Start, destination 18.193.243.47:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.32 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Waiting 0.025s before attempting a new connection
+[d8bb8a31:cardano.node.DnsSubscription:Debug:69] [2021-08-28 10:06:44.32 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Allocate socket to 18.193.243.47:3001
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:70][0m [2021-08-28 10:06:44.35 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Start, destination 35.76.48.104:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:70] [2021-08-28 10:06:44.35 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Allocate socket to 35.76.48.104:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.35 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Waiting 0.025s before attempting a new connection
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:71][0m [2021-08-28 10:06:44.37 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Start, destination 54.153.11.18:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:71] [2021-08-28 10:06:44.37 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Allocate socket to 54.153.11.18:3001
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.37 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Waiting 0.025s before attempting a new connection
+[35m[d8bb8a31:cardano.node.DnsSubscription:Notice:69][0m [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt End, destination 18.193.243.47:3001 outcome: ConnectSuccessLast
+[d8bb8a31:cardano.node.DnsSubscription:Debug:67] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Exception, destination 3.142.127.63:3001 exception: SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}
+[d8bb8a31:cardano.node.DnsSubscription:Debug:67] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Closed socket to 3.142.127.63:3001
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:52][0m [2021-08-28 10:06:44.38 UTC] IP 3.142.127.63:3001 ErrorPolicySuspendConsumer (Just (ConnectionExceptionTrace (SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}))) 1s
+[d8bb8a31:cardano.node.DnsSubscription:Debug:68] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Exception, destination 18.142.32.1:3001 exception: SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}
+[d8bb8a31:cardano.node.DnsSubscription:Debug:68] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Closed socket to 18.142.32.1:3001
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:52][0m [2021-08-28 10:06:44.38 UTC] IP 18.142.32.1:3001 ErrorPolicySuspendConsumer (Just (ConnectionExceptionTrace (SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}))) 1s
+[d8bb8a31:cardano.node.DnsSubscription:Debug:70] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Exception, destination 35.76.48.104:3001 exception: SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}
+[d8bb8a31:cardano.node.DnsSubscription:Debug:70] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Closed socket to 35.76.48.104:3001
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:52][0m [2021-08-28 10:06:44.38 UTC] IP 35.76.48.104:3001 ErrorPolicySuspendConsumer (Just (ConnectionExceptionTrace (SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}))) 1s
+[d8bb8a31:cardano.node.DnsSubscription:Debug:71] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Connection Attempt Exception, destination 54.153.11.18:3001 exception: SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}
+[d8bb8a31:cardano.node.DnsSubscription:Debug:71] [2021-08-28 10:06:44.38 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Closed socket to 54.153.11.18:3001
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:52][0m [2021-08-28 10:06:44.38 UTC] IP 54.153.11.18:3001 ErrorPolicySuspendConsumer (Just (ConnectionExceptionTrace (SubscriberError {seType = SubscriberParallelConnectionCancelled, seMessage = "Parallel connection cancelled", seStack = []}))) 1s
+[d8bb8a31:cardano.node.DnsSubscription:Debug:54] [2021-08-28 10:06:44.40 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Required subscriptions started
+[d8bb8a31:cardano.node.ChainDB:Debug:81] [2021-08-28 10:06:44.70 UTC] Block added to queue: 7aa2800e45b977f0a1a2822c01c1dadaa41a6eaeb5224967e8173a6940bd29b4 at slot 663000 queue size 1
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:06:44.70 UTC] Chain extended, new tip: 7aa2800e45b977f0a1a2822c01c1dadaa41a6eaeb5224967e8173a6940bd29b4 at slot 663000
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:06:57.37 UTC] Chain extended, new tip: 9f6e55bf8b17c6187741058d28ba5de3a7b42ca90ba9ff3892c89b82004b90eb at slot 663177
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:61][0m [2021-08-28 10:06:58.52 UTC] IP 127.0.0.1:58282 ErrorPolicySuspendConsumer (Just (ApplicationExceptionTrace ExceededTimeLimit (Handshake) (ClientAgency TokPropose))) 20s
+[35m[d8bb8a31:cardano.node.ErrorPolicy:Notice:61][0m [2021-08-28 10:07:09.69 UTC] IP 127.0.0.1:58292 ErrorPolicySuspendConsumer (Just (ApplicationExceptionTrace ExceededTimeLimit (Handshake) (ClientAgency TokPropose))) 20s
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:07:39.49 UTC] Chain extended, new tip: 1267ccfbf8319992faff55d07e310dec43bb9062d50fe2248367f8488bb7cc96 at slot 663219
+[d8bb8a31:cardano.node.ChainDB:Debug:33] [2021-08-28 10:07:39.72 UTC] before next, messages elided = 7157835244772
+[d8bb8a31:cardano.node.ChainDB:Debug:33] [2021-08-28 10:07:39.72 UTC] Chain added block 555cd471cda881a108de655d90b7c92378d891ba62db1bef321c36b6d4809b89 at slot 663219
+[34m[d8bb8a31:cardano.node.ChainDB:Info:33][0m [2021-08-28 10:07:39.72 UTC] Block fits onto some fork: 555cd471cda881a108de655d90b7c92378d891ba62db1bef321c36b6d4809b89 at slot 663219
+[34m[d8bb8a31:cardano.node.ChainDB:Info:33][0m [2021-08-28 10:07:39.72 UTC] Valid candidate 555cd471cda881a108de655d90b7c92378d891ba62db1bef321c36b6d4809b89 at slot 663219
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:07:39.72 UTC] Switched to a fork, new tip: 555cd471cda881a108de655d90b7c92378d891ba62db1bef321c36b6d4809b89 at slot 663219
+[33m[d8bb8a31:cardano.node.ErrorPolicy:Warning:61][0m [2021-08-28 10:07:43.18 UTC] IP 127.0.0.1:58358 ErrorPolicySuspendPeer (Just (ApplicationExceptionTrace (MuxError MuxBearerClosed "<socket: 49> closed when reading data, waiting on next header False"))) 20s 20s
+[d8bb8a31:cardano.node.ChainDB:Debug:81] [2021-08-28 10:07:49.35 UTC] Block added to queue: 06a893b430126db6608c5cdd0bf3a80c8f01b5871d361d28c9bd2e2ab59242f3 at slot 663229 queue size 1
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:07:49.35 UTC] Chain extended, new tip: 06a893b430126db6608c5cdd0bf3a80c8f01b5871d361d28c9bd2e2ab59242f3 at slot 663229
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:07:51.66 UTC] before next, messages elided = 7167693965770
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:07:51.66 UTC] Scheduled a garbage collection for 662520
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:07:51.66 UTC] Performed a garbage collection for 662440
+[d8bb8a31:cardano.node.ChainDB:Debug:81] [2021-08-28 10:08:00.34 UTC] Block added to queue: 5b64d700a03c8091098474cc239df51efd7864d964480b7a681a72368c7ce1c8 at slot 663240 queue size 1
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:08:00.35 UTC] Chain extended, new tip: 5b64d700a03c8091098474cc239df51efd7864d964480b7a681a72368c7ce1c8 at slot 663240
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:08:01.66 UTC] before next, messages elided = 7178689974018
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:08:01.66 UTC] Scheduled a garbage collection for 662526
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:08:01.66 UTC] Performed a garbage collection for 662486
+[d8bb8a31:cardano.node.ChainDB:Debug:81] [2021-08-28 10:08:13.36 UTC] Block added to queue: 3f97b364b6a50380be92d27bcca97c9370ea055702aa3b1209b4505af1570189 at slot 663253 queue size 1
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:08:13.36 UTC] Chain extended, new tip: 3f97b364b6a50380be92d27bcca97c9370ea055702aa3b1209b4505af1570189 at slot 663253
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:08:17.49 UTC] Chain extended, new tip: e89587c833a0049b40e8ce78885ca1a6e40721af3e90c0bb942b2c251fae2612 at slot 663257
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:08:35.98 UTC] Chain extended, new tip: b34d9a69b43df20169d9fcf7e430cad9b6873526f76b43c69a2d7be9b1f1104e at slot 663275
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] before next, messages elided = 7214320225835
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] Scheduled a garbage collection for 662587
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] New follower was created
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] FollowerNoLongerInMem
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:103] [2021-08-28 10:08:38.34 UTC] TraceImmutableDBEvent
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:08:41.66 UTC] Performed a garbage collection for 662489
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:09:11.43 UTC] Chain extended, new tip: 6417cadfbec7bb4855f0ff2eb043998913befc9637ab4af67a33f500c4a527d3 at slot 663311
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:09:14.43 UTC] Chain extended, new tip: aeaf667044c68519dc5501f4004f334f470f13a1134240861cb7d656efac8c65 at slot 663314
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:09:20.30 UTC] Chain extended, new tip: 07ef82c4d465bc95fcd109f79d0f71510547203bcb19464cf04c8140083da610 at slot 663320
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:21.66 UTC] before next, messages elided = 7258638319067
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:21.66 UTC] Scheduled a garbage collection for 662651
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:21.66 UTC] Performed a garbage collection for 662567
+[d8bb8a31:cardano.node.ChainDB:Debug:81] [2021-08-28 10:09:39.37 UTC] Block added to queue: a744e927e3b03c28280e7a58c9eca098084fc9fb18e9e3a381ed8b4c575cbee1 at slot 663339 queue size 1
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:09:39.37 UTC] Chain extended, new tip: a744e927e3b03c28280e7a58c9eca098084fc9fb18e9e3a381ed8b4c575cbee1 at slot 663339
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:41.66 UTC] before next, messages elided = 7277711872167
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:41.66 UTC] Scheduled a garbage collection for 662653
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:09:41.66 UTC] Performed a garbage collection for 662587
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:10:11.66 UTC] Performed a garbage collection for 662600
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:10:29.99 UTC] Chain extended, new tip: 4f7c07d0e4cb538d35b61cf8a7df95d0507ff20d387f75a35cdd7263fb6c7860 at slot 663389
+[35m[d8bb8a31:cardano.node.ChainDB:Notice:33][0m [2021-08-28 10:10:40.48 UTC] Chain extended, new tip: 676df73f76f9264f60e691a140a8da4dd9b263f7dd8d4ed354c69baf62a18921 at slot 663400
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:10:41.66 UTC] before next, messages elided = 7338819792604
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:10:41.66 UTC] Scheduled a garbage collection for 662680
+[d8bb8a31:cardano.node.ChainDB:Debug:35] [2021-08-28 10:10:41.66 UTC] Performed a garbage collection for 662653
+[31m[d8bb8a31:cardano.node.DnsSubscription:Error:69][0m [2021-08-28 10:10:48.55 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Application Exception: 18.193.243.47:3001 SubscriberError {seType = SubscriberWorkerCancelled, seMessage = "SubscriptionWorker exiting", seStack = []}
+[d8bb8a31:cardano.node.DnsSubscription:Debug:69] [2021-08-28 10:10:48.55 UTC] Domain: "relays.alonzo-purple.dev.cardano.org" Closed socket to 18.193.243.47:3001
+[34m[d8bb8a31:cardano.node.DiffusionInitializationTracer:Info:5][0m [2021-08-28 10:10:48.56 UTC] DiffusionErrored user interrupt
+[d8bb8a31:cardano.node.ChainDB:Debug:5] [2021-08-28 10:10:48.56 UTC] TraceImmutableDBEvent
+[34m[d8bb8a31:cardano.node.ChainDB:Info:5][0m [2021-08-28 10:10:48.56 UTC] Closed db with immutable tip at 63d07de0908712d4f946ece369a697080dfd4fb55aea0cae21e461d7512d8e0d at slot 662680 and tip 676df73f76f9264f60e691a140a8da4dd9b263f7dd8d4ed354c69baf62a18921 at slot 663400

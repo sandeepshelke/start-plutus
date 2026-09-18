@@ -1,0 +1,37 @@
+# --- secrets: never commit ---
+*.skey
+*.vkey
+*.addr
+*.mnemonic
+.env
+
+# --- chain data / node state (GB-scale, regenerable) ---
+mainnet/
+testnet/
+Alonzo-testnet/
+cardano-node/
+cardano-node-1.31.0/
+alonzo-purple/state-node-alonzo-purple/
+result/
+
+# --- upstream clones, fetch separately ---
+plutus/
+paarka/
+hashlips_art_engine/
+
+# --- local tooling / caches ---
+.vscode-server/
+.local/
+__pycache__/
+mongodb/
+books/
+
+# --- build artifacts ---
+dist-newstyle/
+# --- dangling /nix/store symlinks (targets long gone) ---
+alonzo-purple/cardano-cli
+alonzo-purple/cardano-node
+# --- nested clone of input-output-hk/prism-pioneer-program ---
+prism-pioneer-program/
+# --- unrelated PDF, 97% of commit size ---
+*.pdf
