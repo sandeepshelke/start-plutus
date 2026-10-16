@@ -31,3 +31,20 @@ actually written by hand. Everything else was chain data or clones.
 
 The `alonzo-purple/cardano-cli` and `cardano-node` entries were symlinks
 into `/nix/store` whose targets no longer exist; they are ignored.
+
+## Consolidated 2026-10-16
+
+The last local keepsake folder was folded in here:
+
+- Branch `pioneer-program-mywork`: the full history of the Plutus Pioneer
+  Program clone, i.e. the course repo plus my own commits from July to
+  October 2021 (dev container, notes, lecture 2-5 homework). Its history is
+  unrelated to `main`; `pioneer-program-homework/` above is the final state
+  of the same work.
+- `upstream-edits/`: my local changes to two upstream clones that were not
+  kept, as patches: `Alonzo-testnet.patch` (Alonzo testnet repo) and
+  `hashlips_art_engine.patch` (github.com/HashLips/hashlips_art_engine).
+
+Still not committed, kept privately offline: the wallet keys, the purchased
+books, the MongoDB files, browser bookmarks, third-party PDFs and the Paarka
+hackathon material.
